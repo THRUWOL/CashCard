@@ -12,10 +12,9 @@ import java.util.Optional;
 class CashCardController {
     private final CashCardRepository cashCardRepository;
 
-    CashCardController(CashCardRepository cashCardRepository) {
+    private CashCardController(CashCardRepository cashCardRepository) {
         this.cashCardRepository = cashCardRepository;
     }
-
 
     @GetMapping("/{requestedId}")
     private ResponseEntity<CashCard> findById(@PathVariable Long requestedId) {
